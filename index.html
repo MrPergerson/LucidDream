@@ -187,7 +187,7 @@ Enter someone you lost &lt;&lt;textbox &quot;$characters[6]&quot; &quot;&quot;&g
 2 https://imgur.com/XhnK2zU
 3 https://imgur.com/vtmK2gJ
 5 https://imgur.com/CAzBF9I
-6 https://imgur.com/7UEJFZb</tw-passagedata><tw-passagedata pid="88" name="SurpriseBirthdayParty" tags="" position="1101,603" size="200,100">&lt;&lt;set $names = []&gt;&gt;
+6 https://imgur.com/7UEJFZb</tw-passagedata><tw-passagedata pid="88" name="SurpriseBirthdayParty" tags="" position="1097,603" size="200,100">&lt;&lt;set $names = []&gt;&gt;
 &lt;&lt;set $BPresponse = []&gt;&gt;
 &lt;&lt;for _i, _person range $characters&gt;&gt;&lt;&lt;if _person !== &quot;&quot;&gt;&gt;&lt;&lt;set$names.push(_person)&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;set$names.push($defaultCharacters[_i])&gt;&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;/for&gt;&gt;
@@ -202,10 +202,10 @@ SURPRISE!! HAPPY BIRTHDAY!!
 You&#39;re inside a familiar home and the first thing you see is &lt;&lt;print $names[0]&gt;&gt; in front of you holding a large frosted cake with one lit candle. Next to &lt;&lt;print $names[0]&gt;&gt; is &lt;&lt;print $names[3]&gt;&gt; holding a wrapped present and they seem eager to give it to you. &lt;&lt;print $names[2]&gt;&gt; and &lt;&lt;print $names[5]&gt;&gt; are happily singing happy birthday. While this is happening, &lt;&lt;print $names[4]&gt;&gt; is taking photos of all your reactions. &lt;&lt;print $names[6]&gt;&gt; enters the room and you get the sense that they have arrived late.
 
 You feel..
-[[Happiness -&gt;CuttingTheCake][$selectedEmotion to 1]]
+[[Happy -&gt;CuttingTheCake][$selectedEmotion to 1]]
 [[Anger -&gt;CuttingTheCake][$selectedEmotion to 2]]
 [[Fear -&gt;CuttingTheCake][$selectedEmotion to 3]]
-[[Sadness -&gt;CuttingTheCake][$selectedEmotion to 4]]</tw-passagedata><tw-passagedata pid="89" name="CuttingTheCake" tags="" position="1401,603" size="200,100">&lt;&lt;if $selectedEmotion is 1&gt;&gt; 
+[[Sad -&gt;CuttingTheCake][$selectedEmotion to 4]]</tw-passagedata><tw-passagedata pid="89" name="CuttingTheCake" tags="" position="1402,603" size="200,100">&lt;&lt;if $selectedEmotion is 1&gt;&gt; 
 	&lt;&lt;set $emotions.happy += 1&gt;&gt;
 	&lt;&lt;set $BPresponse[0] to &quot;happy&quot;&gt;&gt;
 &lt;&lt;elseif $selectedEmotion is 2&gt;&gt;
@@ -223,10 +223,10 @@ You feel..
 You&#39;re now sitting at a table with the cake in front of you. The smell of the rich frosting intensifies as you lean closer to the cake. You notice &lt;&lt;print $names[5]&gt;&gt; holding a knife next to you. Everyone else is sitting at the table with you. &lt;&lt;print $names[2]&gt;&gt; and &lt;&lt;print $names[6]&gt;&gt; are sitting right next to you. &lt;&lt;print $names[5]&gt;&gt; leans over and starts cutting the cake. &lt;&lt;print $names[0]&gt;&gt; is nowhere to be seen.
 
 How do you feel
-[[Happiness -&gt;Farewell][$selectedEmotion to 1]]
+[[Happy -&gt;Farewell][$selectedEmotion to 1]]
 [[Anger -&gt;Farewell][$selectedEmotion to 2]]
 [[Fear -&gt;Farewell][$selectedEmotion to 3]]
-[[Sadness -&gt;Farewell][$selectedEmotion to 4]]</tw-passagedata><tw-passagedata pid="90" name="Farewell" tags="" position="1702,600" size="200,100">&lt;&lt;if $selectedEmotion is 1&gt;&gt; 
+[[Sad -&gt;Farewell][$selectedEmotion to 4]]</tw-passagedata><tw-passagedata pid="90" name="Farewell" tags="" position="1702,600" size="200,100">&lt;&lt;if $selectedEmotion is 1&gt;&gt; 
 	&lt;&lt;set $emotions.happy += 1&gt;&gt;
 	&lt;&lt;set $BPresponse[1] to &quot;happy&quot;&gt;&gt;
 &lt;&lt;elseif $selectedEmotion is 2&gt;&gt;
